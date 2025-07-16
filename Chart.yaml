@@ -1,8 +1,8 @@
 apiVersion: v2
-name: oauth2-proxy-kuma helm chart
+name: oauth2-proxy-kuma
 description: A Helm chart which contains chart for oauth2-proxy and kuma
-version: 0.1.0
-appVersion: 1.0.0
+version: 7.7.24.2.8.2
+appVersion: 7.7.24.2.8.2
 dependencies:
   - name: oauth2-proxy
     version: "7.7.24"
