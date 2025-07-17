@@ -38,4 +38,5 @@ kuma:
   controlPlane.logLevel: info
   controlPlane.autoscaling.enabled: false
   ingress.enabled: false
-  egress.enabled: false  
+  egress.enabled: false
+  cni.enabled: false
