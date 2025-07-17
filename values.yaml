@@ -40,3 +40,5 @@ kuma:
   ingress.enabled: false
   egress.enabled: false
   cni.enabled: false
+  ingress.logLevel: info
+  egress.logLevel: info
