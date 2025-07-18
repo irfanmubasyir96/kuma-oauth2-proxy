@@ -1,4 +1,4 @@
-# kuma-oauth2-proxy
+# kuma-oauth2-proxy (m.irfan@samsung.com)
  
 This helm chart is a combination of these 2 helm charts:
 - [Kuma](https://kumahq.github.io/charts)
