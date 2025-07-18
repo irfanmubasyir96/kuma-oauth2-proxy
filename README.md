@@ -10,3 +10,5 @@ Value of each chart can be overridden by setting the corresponding value in the 
 # Building / Releasing this Helm chart
 Before releasing this chart, please make sure to build it by running `helm dependency build`
 This chart needs to be "built" due to it needing to download dependencies first
+
+Author: Muhammad Irfan Mubasyir
