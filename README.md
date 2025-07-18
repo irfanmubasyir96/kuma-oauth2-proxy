@@ -1,4 +1,4 @@
-# kuma-oauth2-proxy (m.irfan@samsung.com)
+# kuma-oauth2-proxy 
  
 This helm chart is a combination of these 2 helm charts:
 - [Kuma](https://kumahq.github.io/charts)
@@ -10,3 +10,5 @@ Value of each chart can be overridden by setting the corresponding value in the 
 # Building / Releasing this Helm chart
 Before releasing this chart, please make sure to build it by running `helm dependency build`
 This chart needs to be "built" due to it needing to download dependencies first
+
+Author: Muhammad Irfan Mubasyir
