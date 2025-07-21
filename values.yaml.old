@@ -1,0 +1,44 @@
+oauth2-proxy:
+  httpScheme: http
+  extraArgs.provider: oidc
+  extraArgs.provider-display-name: Loft SSO
+  extraArgs.oidc-issuer-url: http://loft.iyunusp.com/oidc
+  extraArgs.ssl-insecure-skip-verify: true
+  extraArgs.skip-provider-button: true
+  extraArgs.set-xauthrequest: true
+  extraArgs.email-domain: "*" 
+  extraArgs.cookie-expire: 24h
+  extraArgs.cookie-refresh: 30m
+  extraArgs.cookie-csrf-per-request: true
+  extraArgs.cookie-csrf-expire: 5m
+  extraArgs.cookie-secure: false
+  extraArgs.scope: openid email groups profile offline_access
+  extraArgs.oidc-groups-claim: "groups"
+  extraArgs.redirect-url:  http://localhost:8080/oauth2/callback
+  extraArgs.upstream: http://kuma-control-plane.sample.svc.cluster.local:5681 
+  ingress.enabled: false
+  extraObjects[0].apiVersion: v1
+  extraObjects[0].kind: Secret
+  extraObjects[0].metadata.name: oauth2-proxy-cookie-secret
+  extraObjects[0].type: Opaque
+  extraObjects[0].data.COOKIE_SECRET: lp2PKVSYY7h6H3fRPTsnpT6oCn0jEmvVXBfSP59VVHQ=
+  proxyVarsAsSecrets: false
+  extraEnv[0].name: OAUTH2_PROXY_CLIENT_ID
+  extraEnv[0].valueFrom.secretKeyRef.name: oauth-proxy-secret
+  extraEnv[0].valueFrom.secretKeyRef.key: clientID
+  extraEnv[1].name: OAUTH2_PROXY_CLIENT_SECRET
+  extraEnv[1].valueFrom.secretKeyRef.name: oauth-proxy-secret
+  extraEnv[1].valueFrom.secretKeyRef.key: clientSecret
+  extraEnv[2].name: OAUTH2_PROXY_COOKIE_SECRET
+  extraEnv[2].valueFrom.secretKeyRef.name: oauth2-proxy-cookie-secret
+  extraEnv[2].valueFrom.secretKeyRef.key: COOKIE_SECRET
+
+kuma:
+  controlPlane.mode: zone
+  controlPlane.logLevel: info
+  controlPlane.autoscaling.enabled: false
+  ingress.enabled: false
+  egress.enabled: false
+  cni.enabled: false
+  ingress.logLevel: info
+  egress.logLevel: info
