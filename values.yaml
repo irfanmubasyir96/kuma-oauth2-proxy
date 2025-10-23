@@ -22,7 +22,8 @@ oauth2-proxy:
   extraObjects:
     - apiVersion: v1
       kind: Secret
-      metadata.name: oauth2-proxy-cookie-secret
+      metadata:
+        name: oauth2-proxy-cookie-secret
       type: Opaque
       data:
         COOKIE_SECRET: lp2PKVSYY7h6H3fRPTsnpT6oCn0jEmvVXBfSP59VVHQ=
