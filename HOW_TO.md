@@ -84,14 +84,14 @@ dependencies:<br>
     enabled: true<br>
 
 srin@srin-product-eng-1:~/irfan.m/kuma-oauth2-proxy$ **helm package .**<br>
-Successfully packaged chart and saved it to: /home/srin/irfan.m/kuma-oauth2-proxy/oauth2-proxy-kuma-1.0.0.tgzv
+Successfully packaged chart and saved it to: /home/srin/irfan.m/kuma-oauth2-proxy/**oauth2-proxy-kuma-1.0.0.tgz**
 
 srin@srin-product-eng-1:~/irfan.m/kuma-oauth2-proxy$ **ls -l**<br>
 total 212<br>
 -rw-r--r-- 1 srin srin    308 Jul 16 08:01 Chart.lock<br>
 drwxr-xr-x 2 srin srin   4096 Jul 17 07:30 charts<br>
 -rw-r--r-- 1 srin srin    385 Jul 17 07:26 Chart.yaml<br>
--rw-rw-r-- 1 srin srin 196500 Jul 17 07:49 oauth2-proxy-kuma-1.0.0.tgz<br>
+-rw-rw-r-- 1 srin srin 196500 Jul 17 07:49 **oauth2-proxy-kuma-1.0.0.tgz**<br>
 -rw-rw-r-- 1 srin srin    637 Jul 16 08:00 README.md<br>
 -rw-rw-r-- 1 srin srin   1737 Jul 17 07:23 values.yaml<br>
 
@@ -101,7 +101,7 @@ total 216<br>
 -rw-r--r-- 1 srin srin    308 Jul 16 08:01 Chart.lock<br>
 drwxr-xr-x 2 srin srin   4096 Jul 17 07:30 charts<br>
 -rw-r--r-- 1 srin srin    385 Jul 17 07:26 Chart.yaml<br>
--rw-r--r-- 1 srin srin   2901 Jul 17 07:50 index.yaml<br>
+-rw-r--r-- 1 srin srin   2901 Jul 17 07:50 **index.yaml**<br>
 -rw-rw-r-- 1 srin srin 196500 Jul 17 07:49 oauth2-proxy-kuma-1.0.0.tgz<br>
 -rw-rw-r-- 1 srin srin    637 Jul 16 08:00 README.md<br>
 -rw-rw-r-- 1 srin srin   1737 Jul 17 07:23 values.yaml<br>
